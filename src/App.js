@@ -1,11 +1,13 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { View } from 'react-native'
 
-function App() {
-	return (
-		<View>
-			<Text>Hello, world!</Text>
-		</View>
-	)
-}
-export default App
+import First from './components/First'
+import Comp1, { Comp2, Comp3 } from './components/Multi'
+export default () => (
+	<View>
+		<First></First>
+		<Comp1></Comp1>
+		<Comp2></Comp2>
+		<Comp3></Comp3>
+	</View>
+)
