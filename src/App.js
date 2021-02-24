@@ -12,7 +12,7 @@ export default () => (
 		<Comp2></Comp2>
 		<Comp3></Comp3> */}
 
-		<MinMax min='3' max='4'></MinMax>
+		<MinMax min={3} max={4}></MinMax>
 	</View>
 )
 
