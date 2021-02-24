@@ -1,4 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
 
-export default () => <Text>First Component</Text>
+import Style from './style'
+
+export default () => <Text style={Style.text}>First Component</Text>
