@@ -9,7 +9,7 @@ import { View, StyleSheet } from 'react-native'
 // import Button from './components/Button'
 // import Counter from './components/Counter'
 
-import Parent from './components/direct/Parent'
+import Parent from './components/undirect/Parent'
 
 export default () => (
 	<View style={style.App}>
