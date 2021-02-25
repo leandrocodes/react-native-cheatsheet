@@ -15,7 +15,7 @@ export default () => (
 
 		{/* <MinMax min={3} max={4}></MinMax> */}
 
-		<RandomMinMax min={0} max={2}></RandomMinMax>
+		<RandomMinMax min={10} max={20}></RandomMinMax>
 	</View>
 )
 

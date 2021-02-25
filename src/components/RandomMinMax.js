@@ -1,10 +1,8 @@
 import React from 'react'
 import { Text } from 'react-native'
-
+import Style from './style'
 export default props => {
-	return (
-		<Text>
-			O numero gerado é: {Math.random() * (props.max - props.min) + props.min}
-		</Text>
-	)
+	const aleatorio = Math.random() * (props.max - props.min) + props.min
+
+	return <Text style={Style.text}>O numero gerado é: {aleatorio}</Text>
 }
