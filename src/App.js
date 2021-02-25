@@ -19,13 +19,15 @@ import FlexboxV1 from './components/layout/FlexboxV1'
 // import ProductList from './components/products/ProductList'
 // import ProductListV2 from './components/products/ProductListV2'
 // import TypeYourName from './components/TypeYourName'
-import Flexbox from './components/layout/FlexboxV1'
+// import Flexbox from './components/layout/FlexboxV1'
+import FlexboxV2 from './components/layout/FlexboxV2'
 
 
 export default () => (
   <SafeAreaView style={style.App}>
-		<FlexboxV1></FlexboxV1>
+		<FlexboxV2></FlexboxV2>
     {/* 
+		<FlexboxV1></FlexboxV1>
 		<TypeYourName />
 		<First></First>
 		<Comp1></Comp1>
