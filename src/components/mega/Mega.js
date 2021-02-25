@@ -1,14 +1,31 @@
 import React from 'react'
-import { Text, TextInput } from 'react-native'
+import { Button, Text, TextInput } from 'react-native'
 import style from '../style'
 
 export default class Mega extends React.Component {
   state = {
-    qty: this.props.qty
+    qty: this.props.qty,
+    numbers: []
   }
 
-  changeQty(qty) {
-    this.setState({qty})
+  changeQty = (qty) => {
+    this.setState({ qty: Number(qty) })
+  }
+
+  gerateNumber = (nums) => {
+    const newN = parseInt(Math.random() * 60 + 1)
+    return nums.includes(newN) ? this.gerateNumber(nums) : newN
+  }
+
+  generateNumbers = () => {
+    const numbers = Array(this.state.qty)
+      .fill()
+      .reduce(n => [...n, this.gerateNumber(n)], [])
+      .sort((a, b) => a-b)
+
+      console.log(numbers)
+    
+    this.setState({ numbers })
   }
 
   // constructor(props) {
@@ -23,15 +40,19 @@ export default class Mega extends React.Component {
     return (
       <>
         <Text style={style.text}> Gerador de números da Mega-Sena!</Text>
-        <Text style={style.text}> Geraremos para você {this.state.qty}</Text>
 
         <TextInput
           keyboardType={'numeric'}
-          style={ {borderBottomWidth: 1} }
+          style={{ borderBottomWidth: 1 }}
           placeholder='Digite quantos numeros vc quer gerar'
-          value={this.state.qty}
-          onChangeText={qty => this.changeQty(qty)}
+          value={`${this.state.qty}`}
+          onChangeText={this.changeQty}
         />
+        <Button title='Gerar numeros' onPress={this.generateNumbers}></Button>
+        <Text style={style.text}>
+          {' '}
+          Geramos: {this.state.numbers.join(', ')}
+        </Text>
       </>
     )
   }
