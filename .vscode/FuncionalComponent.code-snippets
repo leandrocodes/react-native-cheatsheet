@@ -5,10 +5,11 @@
     "body": [
       "import React from 'react'",
       "import { View, Text } from 'react-native'",
+      "import Style from './style'",
       "",
       "export default props => {",
       "  return (",
-      "    <Text>$1</Text>",
+      "    <Text style={Style.text}>$1</Text>",
       "   )",
       "}"
     ]
