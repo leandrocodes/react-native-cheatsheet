@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, SafeAreaView } from 'react-native'
+import FlexboxV1 from './components/layout/FlexboxV1'
 
 // import First from './components/First'
 // import Comp1, { Comp2, Comp3 } from './components/Multi'
@@ -17,15 +18,16 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 // import UserLogged from './components/UserLogged'
 // import ProductList from './components/products/ProductList'
 // import ProductListV2 from './components/products/ProductListV2'
+// import TypeYourName from './components/TypeYourName'
+import Flexbox from './components/layout/FlexboxV1'
 
-import TypeYourName from './components/TypeYourName'
 
 export default () => (
   <SafeAreaView style={style.App}>
-
+		<FlexboxV1></FlexboxV1>
+    {/* 
 		<TypeYourName />
-
-    {/* <First></First>
+		<First></First>
 		<Comp1></Comp1>
 		<Comp2></Comp2>
 		<Comp3></Comp3>
