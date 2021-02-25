@@ -6,7 +6,9 @@ import { View, StyleSheet } from 'react-native'
 // import MinMax from './components/MinMax'
 // import RandomMinMax from './components/RandomMinMax'
 // import Title from './components/Title'
-import Button from './components/Button'
+// import Button from './components/Button'
+
+import Counter from './components/Counter'
 
 export default () => (
 	<View style={style.App}>
@@ -16,9 +18,10 @@ export default () => (
 		<Comp3></Comp3>
 		/<MinMax min={3} max={4}></MinMax> 
 		/<RandomMinMax min={10} max={20}></RandomMinMax> 
-		<Title main='title' sub='subtitle'></Title> */}
+		<Title main='title' sub='subtitle'></Title> 
+		<Button />*/}
 
-		<Button />
+		<Counter inicial={500} step={10}></Counter>
 	</View>
 )
 
