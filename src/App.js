@@ -10,8 +10,8 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 // import Counter from './components/Counter'
 // import Parent from './components/undirect/Parent'
 // import Counter from './components/counter/Counter'
-
-import Diference from './components/Diference'
+// import Diference from './components/Diference'
+import EvenOrOdd from './components/EvenOrOdd'
 
 export default () => (
 	<SafeAreaView style={style.App}>
@@ -28,7 +28,11 @@ export default () => (
 		*/}
 		{/* <Counter></Counter> */}
 
-		<Diference></Diference>
+		{/* <Diference></Diference> */}
+
+		<EvenOrOdd></EvenOrOdd>
+		<EvenOrOdd num={5}></EvenOrOdd>
+		<EvenOrOdd num={13}></EvenOrOdd>
 
 	</SafeAreaView>
 )
