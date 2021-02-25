@@ -1,0 +1,16 @@
+{
+  "Functional Component": {
+    "scope": "javascript",
+    "prefix": "funcomp",
+    "body": [
+      "import React from 'react'",
+      "import { View, Text } from 'react-native'",
+      "",
+      "export default props => {",
+      "  return (",
+      "    <Text>$1</Text>",
+      "   )",
+      "}"
+    ]
+  }
+}
