@@ -15,8 +15,9 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 // import Parent from './components/relation/Parent'
 // import Child from './components/relation/Child'
 // import UserLogged from './components/UserLogged'
+// import ProductList from './components/products/ProductList'
 
-import ProductList from './components/products/ProductList'
+import ProductListV2 from './components/products/ProductListV2'
 
 export default () => (
 	<SafeAreaView style={style.App}>
@@ -50,7 +51,9 @@ export default () => (
 			{/* <UserLogged user={ {name: 'Leandro', email: 'leandroviana@gmail.com'} }></UserLogged>
 			<UserLogged user={ {name: 'Leandro'} }></UserLogged> */}
 
-			<ProductList></ProductList>
+			{/* <ProductList></ProductList> */}
+
+			<ProductListV2></ProductListV2>
 
 	</SafeAreaView>
 )
