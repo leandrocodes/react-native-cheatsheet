@@ -8,8 +8,9 @@ import { View, StyleSheet } from 'react-native'
 // import Title from './components/Title'
 // import Button from './components/Button'
 // import Counter from './components/Counter'
+// import Parent from './components/undirect/Parent'
 
-import Parent from './components/undirect/Parent'
+import Counter from './components/counter/Counter'
 
 export default () => (
 	<View style={style.App}>
@@ -21,8 +22,11 @@ export default () => (
 		<RandomMinMax min={10} max={20}></RandomMinMax> 
 		<Title main='title' sub='subtitle'></Title> 
 		<Button />
-		<Counter inicial={500} step={10}></Counter>*/}
+		<Counter inicial={500} step={10}></Counter>
 		<Parent></Parent>
+		*/}
+
+		<Counter></Counter>
 	</View>
 )
 
