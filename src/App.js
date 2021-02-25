@@ -11,7 +11,10 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 // import Parent from './components/undirect/Parent'
 // import Counter from './components/counter/Counter'
 // import Diference from './components/Diference'
-import EvenOrOdd from './components/EvenOrOdd'
+// import EvenOrOdd from './components/EvenOrOdd'
+
+import Parent from './components/relation/Parent'
+import Child from './components/relation/Child'
 
 export default () => (
 	<SafeAreaView style={style.App}>
@@ -30,9 +33,17 @@ export default () => (
 
 		{/* <Diference></Diference> */}
 
-		<EvenOrOdd></EvenOrOdd>
+		{/* <EvenOrOdd></EvenOrOdd>
 		<EvenOrOdd num={5}></EvenOrOdd>
-		<EvenOrOdd num={13}></EvenOrOdd>
+		<EvenOrOdd num={13}></EvenOrOdd> */}
+
+		<Parent>
+			<Child nome="Bia" sobrenome="Pereira"></Child>
+			<Child nome="Ana" sobrenome="Pereira"></Child>
+		</Parent>
+		<Parent>
+			<Child nome="Julia" sobrenome="Silva"></Child>
+		</Parent>
 
 	</SafeAreaView>
 )
