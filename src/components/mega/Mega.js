@@ -1,7 +1,8 @@
 import React from 'react'
-import { Button, Text, TextInput } from 'react-native'
+import { View, Button, Text, TextInput } from 'react-native'
 import style from '../style'
 
+import Number from './Number'
 export default class Mega extends React.Component {
   state = {
     qty: this.props.qty,
@@ -9,7 +10,7 @@ export default class Mega extends React.Component {
   }
 
   changeQty = (qty) => {
-    this.setState({ qty: Number(qty) })
+    this.setState({ qty: +qty })
   }
 
 
@@ -29,6 +30,16 @@ export default class Mega extends React.Component {
     }
     
     this.setState({ numbers })    
+  }
+
+  showNumbers = () => {
+    const nums = this.state.numbers
+
+    return nums.map(num => {
+      return (
+        <Number key={num} num={num} />
+      )
+    })
   }
   // generateNumbers = () => {
   //   const numbers = Array(this.state.qty)
@@ -62,10 +73,9 @@ export default class Mega extends React.Component {
           onChangeText={this.changeQty}
         />
         <Button title='Gerar numeros' onPress={this.generateNumbers}></Button>
-        <Text style={style.text}>
-          {' '}
-          Geramos: {this.state.numbers.join(', ')}
-        </Text>
+        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+          {this.showNumbers()}
+        </View>
       </>
     )
   }
