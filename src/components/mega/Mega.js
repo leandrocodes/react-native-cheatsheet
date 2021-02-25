@@ -12,21 +12,34 @@ export default class Mega extends React.Component {
     this.setState({ qty: Number(qty) })
   }
 
+
+  // Dá pra melhorar o desempenho disso daqui 
   gerateNumber = (nums) => {
     const newN = parseInt(Math.random() * 60 + 1)
     return nums.includes(newN) ? this.gerateNumber(nums) : newN
   }
 
   generateNumbers = () => {
-    const numbers = Array(this.state.qty)
-      .fill()
-      .reduce(n => [...n, this.gerateNumber(n)], [])
-      .sort((a, b) => a-b)
 
-      console.log(numbers)
+    const { qty } = this.state
+    const numbers = []
+
+    for (let i = 0; i < qty; i++) {
+      numbers.push(this.gerateNumber(numbers))
+    }
     
-    this.setState({ numbers })
+    this.setState({ numbers })    
   }
+  // generateNumbers = () => {
+  //   const numbers = Array(this.state.qty)
+  //     .fill()
+  //     .reduce((n) => [...n, this.gerateNumber(n)], [])
+  //     .sort((a, b) => a - b)
+
+  //   console.log(numbers)
+
+  //   this.setState({ numbers })
+  // }
 
   // constructor(props) {
   //   super(props)
