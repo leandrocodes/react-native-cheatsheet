@@ -4,7 +4,8 @@ import { View, StyleSheet } from 'react-native'
 // import First from './components/First'
 // import Comp1, { Comp2, Comp3 } from './components/Multi'
 // import MinMax from './components/MinMax'
-import RandomMinMax from './components/RandomMinMax'
+// import RandomMinMax from './components/RandomMinMax'
+import Title from './components/Title'
 
 export default () => (
 	<View style={style.App}>
@@ -15,7 +16,9 @@ export default () => (
 
 		{/* <MinMax min={3} max={4}></MinMax> */}
 
-		<RandomMinMax min={10} max={20}></RandomMinMax>
+		{/* <RandomMinMax min={10} max={20}></RandomMinMax> */}
+
+		<Title main='title' sub='subtitle'></Title>
 	</View>
 )
 
