@@ -5,7 +5,7 @@ import Square from './Square'
 
 export default props => {
   return (
-    <View style={style.flexV2}>
+    <View style={style.flexV3}>
       <Square color={'#281D27'}></Square>
       <Square color={'#EEBE3F'}></Square>
       <Square color={'#F8F3F3'}></Square>
@@ -16,7 +16,7 @@ export default props => {
 }
 
 const style = StyleSheet.create({
-  flexV2: {
+  flexV3: {
     flexDirection: 'row-reverse',
     justifyContent: 'space-between',
     alignItems: 'center',
