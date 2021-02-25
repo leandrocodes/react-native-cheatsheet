@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { StyleSheet, SafeAreaView } from 'react-native'
 
 // import First from './components/First'
 // import Comp1, { Comp2, Comp3 } from './components/Multi'
@@ -9,11 +9,12 @@ import { View, StyleSheet } from 'react-native'
 // import Button from './components/Button'
 // import Counter from './components/Counter'
 // import Parent from './components/undirect/Parent'
+// import Counter from './components/counter/Counter'
 
-import Counter from './components/counter/Counter'
+import Diference from './components/Diference'
 
 export default () => (
-	<View style={style.App}>
+	<SafeAreaView style={style.App}>
 		{/* <First></First>
 		<Comp1></Comp1>
 		<Comp2></Comp2>
@@ -25,9 +26,11 @@ export default () => (
 		<Counter inicial={500} step={10}></Counter>
 		<Parent></Parent>
 		*/}
+		{/* <Counter></Counter> */}
 
-		<Counter></Counter>
-	</View>
+		<Diference></Diference>
+
+	</SafeAreaView>
 )
 
 const style = StyleSheet.create({
