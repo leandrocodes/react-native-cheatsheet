@@ -16,12 +16,16 @@ import { StyleSheet, SafeAreaView } from 'react-native'
 // import Child from './components/relation/Child'
 // import UserLogged from './components/UserLogged'
 // import ProductList from './components/products/ProductList'
+// import ProductListV2 from './components/products/ProductListV2'
 
-import ProductListV2 from './components/products/ProductListV2'
+import TypeYourName from './components/TypeYourName'
 
 export default () => (
-	<SafeAreaView style={style.App}>
-		{/* <First></First>
+  <SafeAreaView style={style.App}>
+
+		<TypeYourName />
+
+    {/* <First></First>
 		<Comp1></Comp1>
 		<Comp2></Comp2>
 		<Comp3></Comp3>
@@ -31,39 +35,32 @@ export default () => (
 		<Button />
 		<Counter inicial={500} step={10}></Counter>
 		<Parent></Parent>
-		*/}
-		{/* <Counter></Counter> */}
-
-		{/* <Diference></Diference> */}
-
-		{/* <EvenOrOdd></EvenOrOdd>
+		<Counter></Counter>
+		<Diference></Diference>
+		<EvenOrOdd></EvenOrOdd>
 		<EvenOrOdd num={5}></EvenOrOdd>
-		<EvenOrOdd num={13}></EvenOrOdd> */}
-
-		{/* <Parent>
+		<EvenOrOdd num={13}></EvenOrOdd>
+		<Parent>
 			<Child nome="Bia" sobrenome="Pereira"></Child>
 			<Child nome="Ana" sobrenome="Pereira"></Child>
 		</Parent>
 		<Parent>
 			<Child nome="Julia" sobrenome="Silva"></Child>
-		</Parent> */}
-
-			{/* <UserLogged user={ {name: 'Leandro', email: 'leandroviana@gmail.com'} }></UserLogged>
-			<UserLogged user={ {name: 'Leandro'} }></UserLogged> */}
-
-			{/* <ProductList></ProductList> */}
-
+		</Parent>
+			<UserLogged user={ {name: 'Leandro', email: 'leandroviana@gmail.com'} }></UserLogged>
+			<UserLogged user={ {name: 'Leandro'} }></UserLogged>
+			<ProductList></ProductList>
 			<ProductListV2></ProductListV2>
-
-	</SafeAreaView>
+		*/}
+  </SafeAreaView>
 )
 
 const style = StyleSheet.create({
-	App: {
-		flexGrow: 1,
-		backgroundColor: '#aa99ee',
-		justifyContent: 'center',
-		alignItems: 'center',
-		padding: 50
-	}
+  App: {
+    flexGrow: 1,
+    backgroundColor: '#aa99ee',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 50
+  }
 })
